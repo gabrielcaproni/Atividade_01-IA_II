@@ -1,4 +1,11 @@
 /* Estilo geral */
+
+html, body {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
 body {
     background-color: #f8f9fa;
     background-image: url('assets/background.webp'); 
@@ -7,13 +14,18 @@ body {
     background-repeat: no-repeat; 
 }
 
+.container {
+    flex: 1;
+}
+
 /* Estilo do cabeçalho */
 .jumbotron {
-    background-color: #343a40;
+    background-color: rgba(114, 114, 114, 0.0);
+    text-decoration: underline;
     color: white;
-    padding: 30px;
+    padding: 10px;
     border-radius: 5px;
-    margin-bottom: 50px;
+    margin-bottom: 70px;
 }
 
 /* Estilo das seções */
@@ -37,7 +49,7 @@ body {
 .footer {
     background-color: #343a40;
     color: white;
+    text-align: center;
     padding: 20px;
-    margin: 90px;
-    border-radius: 5px;
+    margin-top: auto;
 }
