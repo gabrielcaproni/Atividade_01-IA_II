@@ -1,31 +1,54 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <title>Document</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Atividade 01 Teachable Machine</title>
+
+    <!-- Bootstrap (opcional) -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+
+    <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-    <div class="container" style="text-align: center">
-        <div class="jumbotron" style="background-color: #2f9e41; color: white">
-          <h1>IFSULDEMINAS - Teachable Machine Image Model</h1>
-          <p>Campus Machado</p>
+    <div class="container">
+        <div class="jumbotron">
+            <h1>IFSULDEMINAS - Teachable Machine Image Model</h1>
+            <p>Campus Machado</p>
         </div>
 
-    <div>Teachable Machine Image Model</div>
-<button type="button" onclick="init()">Start</button>
-<div id="webcam-container"></div>
-<div id="label-container"></div>
-<script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest/dist/tf.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@latest/dist/teachablemachine-image.min.js"></script>
-<script type="text/javascript" src="script.js"></script>
-    
+        <!-- Botão para iniciar webcam -->
+        <div>Teachable Machine Image Model</div>
+        <button type="button" onclick="init()">Start</button>
+        <br><br>
+
+        <!-- Input de arquivo e preview da imagem -->
+        <input type="file" id="imageInput" accept="image/*" />
+        <img id="preview" style="max-width: 300px; display:none;" />
+
+        <!-- Contêiner da Webcam -->
+        <div id="webcam-container" style="margin-top: 20px;"></div>
+
+        <!-- Contêiner dos rótulos da Webcam -->
+        <div id="label-container"></div>
+
+        <!-- Contêiner dos rótulos da Imagem carregada -->
+        <div id="image-label-container" style="margin-top: 20px;"></div>
+    </div>
+
+    <footer style="text-align: center; margin-top: 50px;">
+        <p>&copy; 2025 IFSULDEMINAS - Todos os direitos reservados</p>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest/dist/tf.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@latest/dist/teachablemachine-image.min.js"></script>
+    <script src="script.js"></script>
 </body>
-
-<footer style="background-color: #2f9e41; color: white; text-align: center; padding: 20px; margin-top: 20px;">
-    <p>&copy; 2025 IFSULDEMINAS - Todos os direitos reservados</p>
-</footer>
-
 </html>

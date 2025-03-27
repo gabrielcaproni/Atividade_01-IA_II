@@ -1,0 +1,22 @@
+html{
+    margin: 0px;
+    padding: 0px;
+}
+
+footer{
+    background-color: #252525; 
+    color: white; 
+    text-align: center;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.container{
+    text-align: center;
+}
+
+.jumbotron{
+    background-color: #2C2C2C; 
+    color: white;
+}
+
